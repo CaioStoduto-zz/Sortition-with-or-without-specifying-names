@@ -10,7 +10,6 @@ md "Names"
 set "numeros="
 set "cho=0"
 clear
-echo Credits: zKilluaGamer
 sleep 2
 :HOME
 clear
