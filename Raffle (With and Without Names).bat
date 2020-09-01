@@ -18,14 +18,14 @@ set /p "cho=>"
 if %cho%==2 goto 2
 if %cho%==1 goto 1
 clear
-echo Invalid choose...
+echo Invalid choise...
 sleep 2
 goto home
 :1
 set "MODO=1"
 set "cho=S2AnythingS2"
 clear
-echo How many numbers?
+echo How many?
 set /p "cho=>"
 if %cho%==S2AnythingS2 (
 clear
@@ -44,7 +44,7 @@ clear
 if %test1%==%cho% goto letter
 if %cho% LEQ 0 (
 clear
-echo Very low number...
+echo The number that you entered is equal or below 0...
 sleep 2
 goto 1
 )
@@ -56,7 +56,7 @@ set "cho1=Anything"
 if %test%==0 goto sorteador
 set /p "CHO1=%test%.=>"
 if "%cho1%"==Anything (
-echo Please enter a name...
+echo Please, enter a name...
 goto 1LOOP
 )
 echo>>NUM%TEST%. %cho1%
@@ -85,7 +85,7 @@ clear
 if %test1%==%cho% goto letter
 if %cho% LEQ 0 (
 clear
-echo Very low number...
+echo The number that you entered is equal or below 0...
 sleep 2
 goto 1
 )
@@ -113,9 +113,9 @@ for /L %%G in (1 1 1) do (
 clear
 set /p name=<NUM%RESULTADO%.
 title Winner: %name% (%resultado%)
-echo The Winner is: %Name% (%resultado%). Do not enter anything to draw again...
+echo The winner is: %Name% (%resultado%). Press enter to roll again or type something and press enter to exit...
 set /p "cho=>"
-if not %cho%==S2AnythingS2 (
+if %cho%==S2AnythingS2 (
 cd../
 rd "Names" /s /q
 exit
@@ -136,7 +136,7 @@ for /L %%G in (1 1 1) do (
 )
 clear
 title Result: %resultado%
-echo The result is: %resultado%. Do not enter anything to draw again...
+echo The result is: %resultado%. Press enter to roll again or type something and press enter to exit...
 set /p "cho=>"
 if not %cho%==S2AnythingS2 (
 cd../
