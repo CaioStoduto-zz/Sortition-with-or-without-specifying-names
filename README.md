@@ -1,2 +1,2 @@
 # Raffle-CMD
-This program is a Raffle with and without names.
+This aplication makes a sortition with or without specifing names.
