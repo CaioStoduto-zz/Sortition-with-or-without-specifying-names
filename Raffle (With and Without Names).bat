@@ -3,8 +3,8 @@
 CHCP 65001 >NUL
 setlocal enabledelayedexpansion
 cd "%homepath%\Documents\"
-if not exist "Raffle" md "Raffle"
-cd "Raffle"
+if not exist "Sortion" md "Sortion"
+cd "Sortion"
 IF EXIST "Names" rd "Names" /s /q
 md "Names"
 set "numeros="
@@ -13,7 +13,7 @@ clear
 sleep 2
 :HOME
 clear
-echo With names (1) or without names (2)?
+echo With (1) or without (2) names?
 set /p "cho=>"
 if %cho%==2 goto 2
 if %cho%==1 goto 1
@@ -29,7 +29,7 @@ echo How many?
 set /p "cho=>"
 if %cho%==S2AnythingS2 (
 clear
-echo Type some number...
+echo Type a number...
 sleep 2
 goto 1
 )
@@ -50,7 +50,7 @@ goto 1
 )
 set "test=%cho%"
 clear
-cd "%homepath%\Raffle\Names"
+cd "%homepath%\Sortion\Names"
 :1LOOP
 set "cho1=Anything"
 if %test%==0 goto sorteador
@@ -66,11 +66,11 @@ goto 1LOOP
 set "MODO=2"
 set "cho=S2AnythingS2"
 clear
-echo How many numbers?
+echo How many entries?
 set /p "cho=>"
 if %cho%==S2AnythingS2 (
 clear
-echo Type some number...
+echo Type a number...
 sleep 2
 goto 2
 )
